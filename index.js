@@ -23,7 +23,7 @@ client.on('ready', () =>{
 async function AIresponse(userId, userMessage) {
 
 
-    const API_KEY ='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';
+    const API_KEY ='your-key';
     const url = 'https://openrouter.ai/api/v1/chat/completions'
         // Eğer context yoksa oluştur
     if (!userContexts[userId]) {
@@ -45,7 +45,7 @@ async function AIresponse(userId, userMessage) {
 
 
     const body={
-        model: "openai/gpt-3.5-turbo:free",
+        model: "openai/gpt-3.5-turbo:free", /*Your Model*/
         messages: userContexts[userId],
         stream: false
     };
